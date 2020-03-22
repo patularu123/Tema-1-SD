@@ -138,10 +138,9 @@ int main()
     long long *v = new long long[nmax];
     long long *c = new long long[10000005];
     long long val_max;
-    int tip;//pentru numere negative
-    int nrteste;
-    fin>>nrteste;
-    for(q = 1; q <= nrteste ; q++)
+    int tip,nr_total;
+    fin>>nr_total;
+    for(int i= 1; i <=nr_total ; i++)
     {
         fin >>n >> val_max >> tip;
         fout<<"Avem de sortat " << n << " numere " << " cu valoarea maxima de " << val_max << '\n';
@@ -167,7 +166,7 @@ int main()
             fout<<"QuickSort nu a sortat corect"<<'\n';
         copiere(v,c,n);
 
-        if(val_max <= 10000005 && tip == 1)
+        if(val_max <= 10000001 && tip == 1)
         {
             start=clock();
             CountSort(v,n);
